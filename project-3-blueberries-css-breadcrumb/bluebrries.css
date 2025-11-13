@@ -1,0 +1,28 @@
+.breadcrumb li {
+  display: inline;
+  text-decoration: underline;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 1px;
+  padding: 1px;
+  align-items: end;
+}
+
+.breadcrumb li.location+li.location::before {
+  content:"/";
+}
+
+.breadcrumb li:hover {
+   cursor: pointer;
+}
+
+.breadcrumb li.attribute a {
+  color: darkgray;
+}
+
+.breadcrumb li.attribute::after {
+  content:"x";
+  color: red;
+  font-size: 8 px;
+  vertical-align: super;
+}
